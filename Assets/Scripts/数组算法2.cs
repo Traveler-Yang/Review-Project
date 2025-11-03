@@ -15,15 +15,18 @@ public class 数组算法2 : MonoBehaviour
         int i = 0;
         while (i < docs.Length)
         {
+            //当前位置正确
             if (docs[i] == i)
             {
                 i++;
                 continue;
             }
+            //找到了重复
             if (docs[docs[i]] == docs[i])
             {
                 return docs[i];
             }
+            //交换
             int tmp = docs[i];
             docs[i] = docs[tmp];
             docs[tmp] = tmp;
@@ -33,6 +36,10 @@ public class 数组算法2 : MonoBehaviour
 
     void Start()
     {
-        
+        int[] docs = { 2, 5, 3, 0, 5, 0 };
+
+        int res = FindRepeatDoc(docs);
+
+        Debug.Log(res);
     }
 }
