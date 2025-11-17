@@ -13,7 +13,10 @@ public class 字符串算法2 : MonoBehaviour
     //  输出："rltyc0d3s3cu"
     //  0 <= num <= password.length
 
-
+    public string UpdatePassword(string password, int num)
+    {
+        return password.Substring(num, password.Length - num) + password.Substring(0, num);
+    }
 
     private void Start()
     {
